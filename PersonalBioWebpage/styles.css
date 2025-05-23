@@ -1,0 +1,206 @@
+/* =====================
+   Global Reset & Base Styles
+   ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #1f2d5a;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* =====================
+   Header & Navigation
+   ===================== */
+header {
+    background-color: #f5f7fb;
+    border-bottom: 1px solid #d1d9e6;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1f2d5a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #1f2d5a;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #1f2d5a;
+    color: #fff;
+}
+
+.toggle-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/6714/6714978.png');
+    background-size: cover;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.3s;
+}
+
+/* =====================
+   Intro Section
+   ===================== */
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.intro-text h2 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: #1f2d5a;
+}
+
+/* =====================
+   Sections
+   ===================== */
+section {
+    margin-bottom: 50px;
+}
+
+section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e6f1;
+    padding-bottom: 5px;
+    color: #1f2d5a;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#contact a {
+    color: #1f2d5a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #576b95;
+    text-decoration: underline;
+}
+
+/* =====================
+   Footer
+   ===================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f7fb;
+    color: #1f2d5a;
+    font-size: 0.9rem;
+}
+
+/* =====================
+   Dark Mode Styles
+   ===================== */
+body.dark-mode {
+    background-color: #1c1c1e;
+    color: #f2f2f2;
+}
+
+body.dark-mode .nav-container,
+body.dark-mode footer {
+    background-color: #2a2a2d;
+}
+
+body.dark-mode .nav-links li a {
+    color: #f2f2f2;
+}
+
+body.dark-mode .nav-links li a:hover {
+    background-color: #f2f2f2;
+    color: #1c1c1e;
+}
+
+body.dark-mode .toggle-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/6714/6714972.png');
+}
+
+body.dark-mode a {
+    color: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
