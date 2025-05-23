@@ -92,7 +92,11 @@ nav a:hover {
 }
 
 .about-me {
-    flex: 1;
+    display: flex;
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 8px;
 }
 
 /* Section Styles */
